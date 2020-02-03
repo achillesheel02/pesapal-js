@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Donation} from './donation.model';
 import {Sort} from '@angular/material';
+import {NgForm} from '@angular/forms';
 
 function sum(key) {
     return this.reduce((a, b) => a + (b[key] || 0), 0);
@@ -88,4 +89,8 @@ export class AdminComponent implements OnInit {
   compare(a: number | string, b: number | string, isAsc: boolean) {
     return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
   }
+
+  onSubmit(form: NgForm) {
+
   }
+}
