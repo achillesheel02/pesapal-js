@@ -160,7 +160,7 @@ footer a {
   display: flex;
   margin: 25px auto;
   padding: 0 2px;
-  max-width: 1200px;
+  width:100%;
   flex-direction: column;
   align-items: center;
 }
