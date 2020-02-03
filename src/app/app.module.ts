@@ -6,7 +6,15 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { HeaderComponent } from './header/header.component';
-import {MatButtonModule, MatCheckboxModule, MatDividerModule, MatIconModule, MatInputModule, MatToolbarModule} from '@angular/material';
+import {
+  MatButtonModule,
+  MatCardModule,
+  MatCheckboxModule,
+  MatDividerModule,
+  MatIconModule,
+  MatInputModule,
+  MatToolbarModule
+} from '@angular/material';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {FormsModule} from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -34,7 +42,8 @@ import { AdminComponent } from './admin/admin.component';
     FlexLayoutModule,
     MatButtonModule,
     MatCheckboxModule,
-    MatDividerModule
+    MatDividerModule,
+    MatCardModule
 
   ],
   providers: [],
