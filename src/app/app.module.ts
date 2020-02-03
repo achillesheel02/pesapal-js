@@ -10,13 +10,17 @@ import {MatButtonModule, MatCheckboxModule, MatDividerModule, MatIconModule, Mat
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {FormsModule} from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { PesapalPaymentComponent } from './pesapal-payment/pesapal-payment.component';
+import { AdminComponent } from './admin/admin.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     SignUpComponent,
-    HeaderComponent
+    HeaderComponent,
+    PesapalPaymentComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
