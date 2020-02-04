@@ -21,6 +21,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { PesapalPaymentComponent } from './pesapal-payment/pesapal-payment.component';
 import { AdminComponent } from './admin/admin.component';
 import { PhoneNoPipe } from './admin/phone-no.pipe';
+import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { PhoneNoPipe } from './admin/phone-no.pipe';
     PhoneNoPipe
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -47,7 +49,7 @@ import { PhoneNoPipe } from './admin/phone-no.pipe';
     MatDividerModule,
     MatCardModule,
     MatTableModule,
-    MatSortModule
+    MatSortModule,
 
   ],
   providers: [],

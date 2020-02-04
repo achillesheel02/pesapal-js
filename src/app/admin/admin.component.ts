@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Donation} from './donation.model';
 import {Sort} from '@angular/material';
 import {NgForm} from '@angular/forms';
+import {AdminService} from '../services/admin.service';
 
 function sum(key) {
     return this.reduce((a, b) => a + (b[key] || 0), 0);
@@ -53,12 +54,19 @@ export class AdminComponent implements OnInit {
       amount: 7000
     }
   ];
-  constructor() {
+
+  constructor(private adminService: AdminService) {
     this.sortedData = this.donations.slice();
   }
 
   ngOnInit() {
     this.totalDonations = this.donations.reduce((a, b) => +a + +b.amount, 0);
+    this.adminService.getPesaPalMetadata()
+      .subscribe((key) => {
+        this.pesapalConsumerSecret = key.cs;
+        this.pesapalConsumerKey = key.ck;
+        });
+
   }
   checkSecurityKey() {
     return this.key === this.securityKey;
@@ -91,6 +99,12 @@ export class AdminComponent implements OnInit {
   }
 
   onSubmit(form: NgForm) {
-
+    this.adminService.updatePesapalMetadata(form.value.pesapalConsumerKeyUpdated, form.value.pesapalConsumerSecretUpdated);
+    this.adminService.getPesaPalMetadata()
+      .subscribe((key) => {
+        this.pesapalConsumerSecret = key.cs;
+        this.pesapalConsumerKey = key.ck;
+      });
+    form.reset();
   }
 }
