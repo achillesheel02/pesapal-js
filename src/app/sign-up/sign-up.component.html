@@ -7,11 +7,21 @@
     (ngSubmit)="onSubmit(f)">
     <mat-form-field
       appearance="outline">
-      <mat-label>Your Name</mat-label>
+      <mat-label>First Name</mat-label>
       <input
         matInput
         type="text"
-        name="name"
+        name="firstName"
+        ngModel
+        required>
+    </mat-form-field>
+    <mat-form-field
+      appearance="outline">
+      <mat-label>Last Name</mat-label>
+      <input
+        matInput
+        type="text"
+        name="lastName"
         ngModel
         required>
     </mat-form-field>
