@@ -22,6 +22,7 @@ import { PesapalPaymentComponent } from './pesapal-payment/pesapal-payment.compo
 import { AdminComponent } from './admin/admin.component';
 import { PhoneNoPipe } from './admin/phone-no.pipe';
 import {HttpClientModule} from '@angular/common/http';
+import { SuccessComponent } from './success/success.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import {HttpClientModule} from '@angular/common/http';
     HeaderComponent,
     PesapalPaymentComponent,
     AdminComponent,
-    PhoneNoPipe
+    PhoneNoPipe,
+    SuccessComponent
   ],
   imports: [
     HttpClientModule,

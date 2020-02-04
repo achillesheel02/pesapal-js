@@ -99,11 +99,10 @@ export class AdminComponent implements OnInit {
   }
 
   onSubmit(form: NgForm) {
-    this.adminService.updatePesapalMetadata(form.value.pesapalConsumerKeyUpdated, form.value.pesapalConsumerSecretUpdated);
-    this.adminService.getPesaPalMetadata()
-      .subscribe((key) => {
-        this.pesapalConsumerSecret = key.cs;
-        this.pesapalConsumerKey = key.ck;
+    this.adminService.updatePesapalMetadata(form.value.pesapalConsumerKeyUpdated, form.value.pesapalConsumerSecretUpdated)
+      .subscribe((data) => {
+        this.pesapalConsumerKey = data.ck;
+        this.pesapalConsumerSecret = data.cs;
       });
     form.reset();
   }

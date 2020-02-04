@@ -14,10 +14,7 @@ export class AdminService {
 
   updatePesapalMetadata(consumerKey, consumerSecret) {
     const keys: KeyData = {consumerKey, consumerSecret};
-    this.http.post('http://localhost:3000/addkeys', keys)
-      .subscribe((responseData) => {
-        console.log(responseData);
-      });
+    return this.http.post<{ ck: string, cs: string}>('http://localhost:3000/addkeys', keys);
   }
 
   getPesaPalMetadata() {
