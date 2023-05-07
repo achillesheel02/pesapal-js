@@ -27,7 +27,7 @@
     "debug": "latest",
     "express": "^4.17.1",
     "hammerjs": "^2.0.8",
-    "mongoose": "^5.8.11",
+    "mongoose": "^5.13.15",
     "nodemon": "^2.0.2",
     "pesapaljs": "^1.0.0",
     "rxjs": "~6.4.0",
